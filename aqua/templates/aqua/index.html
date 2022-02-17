@@ -1,0 +1,603 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>KREA - VOLIRO</title>
+    <link href="{% static 'aqua/_assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'aqua/_assets/css/stylesheet.css' %}" rel="stylesheet" />
+    <script src="{% static 'aqua/_assets/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'aqua/_assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'aqua/_assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'aqua/_assets/js/jquery.bcSwipe.min.js' %}"></script>
+    <script src="{% static 'aqua/_assets/js/voliro.js' %}"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500,700&amp;subset=latin-ext" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Header Start -->
+
+    <header class="mt-6 " id="navbar">
+
+        <!-- Header Container Start -->
+
+        <div class="container">
+            <nav class="navbar navbar-expand-lg col-12 navbar-dark">
+                <a class="logo navbar-brand" href="javascript:;">
+                    <img class="img-fluid" src="{% static 'aqua/_assets/img/logo.png' %}" width="120" height="120"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% if messages %}
+                        {% for message in messages %}
+                            {% if message.tags == 'error' %}
+                                <div class="alert alert-danger " role="alert">
+                                    {{ message }}
+                                </div>
+                            {% else %}
+                                <div class="alert alert-success" role="alert">
+                                    {{ message }}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                <div class="collapse navbar-collapse ml-auto" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link services-link" href="javascript:;">Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link works-link" href="javascript:;">Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link references-link" href="javascript:;">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link contact-link" href="javascript:;">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 float-left text-center social-mobile-container">
+                        <ul class="list-inline social-mobile">
+                            <li class="list-inline-item text-center">
+                                <a href="javascript:;">
+                                    <img src="{% static 'aqua/_assets/img/mobile-menu-facebook.png' %}" />
+                                </a>
+                            </li>
+                            <li class="list-inline-item  text-center">
+                                <a href="javascript:;">
+                                    <img src="{% static 'aqua/_assets/img/mobile-menu-twitter.png' %}" />
+                                </a>
+                            </li>
+                            <li class="list-inline-item  text-center">
+                                <a href="javascript:;">
+                                    <img src="{% static 'aqua/_assets/img/mobile-menu-linkedin.png' %}" />
+                                </a>
+                            </li>
+                            <li class="list-inline-item  text-center">
+                                <a href="javascript:;">
+                                    <img src="{% static 'aqua/_assets/img/mobile-menu-plus.png' %}" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Header Container Finish -->
+
+    </header>
+
+    <div class="clearfix"></div>
+
+    <section class="top-banner">
+        <div class="top-banner-img">
+            <img class="img-fluid" src="{% static 'aqua/_assets/img/header-bg.jpg' %}" />
+        </div>
+        <div class="top-banner-text">
+            Профессиональная чистка<br />
+            <span>и обслуживание аквариумов</span>
+        </div>
+        <div class="scroll-img">
+        </div>
+    </section>
+
+    <!-- Header Finish -->
+
+    <div class="clearfix"></div>
+
+    <!-- Services Section Start -->
+
+    <section class="services col-12">
+        <h1 class="text-center">AQUA</h1>
+        <h2 class="text-center">Service</h2>
+
+        <!-- Services Section Container Start -->
+
+        <div class="container services-list">
+            <div class="row">
+                <div id="carouselExampleSlidesOnly" class="carousel slide col-14" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="col-xl-6 col-md-12 col-sm-12 float-left carousel-add">
+                            <div class="services-image text-center">
+                                <img class="img-fluid" src="{% static 'aqua/_assets/img/services-1.png' %}" />
+                            </div>
+                            <h3 class="col-12 text-center">Разовое обслуживание аквариума</h3>
+                            <p class="text-center">Разовый выезд к клиенту по заранее согласованному времени</p>
+                        </div>
+                        <div class="col-xl-6 col-md-12 col-sm-12 float-right carousel-add ">
+                            <div class="services-image text-center">
+                                <img class="img-fluid" src="{% static 'aqua/_assets/img/services-2.png' %}" />
+                            </div>
+                            <h3 class="col-12 text-center">Сервисное обслуживание аквариума</h3>
+                            <p class="text-center">Выезд по заранее согласованному с клиентом графику</p>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+                    </ol>
+                </div>
+                <div class="get-it-touch-button">
+                    <a href="javascript:;">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section Container Finish -->
+
+    </section>
+
+    <!-- Services Section Finish -->
+
+    <div class="clearfix"></div>
+
+    <!-- Works Section Start -->
+
+    <section class="works">
+        <h2 class="text-center">Портфолио</h2>
+
+        <!-- Works Section Container Start -->
+
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-12 col-md-12 col-12 float-left">
+                    <a href="javascript:;" class="mt-xl-0 mt-lg-0 mt-md-0 mt-sm-5 float-left col-12" data-target="#modal-1" data-toggle="modal">
+
+                        <img class="img-fluid w-100" src="{% static 'aqua/_assets/img/work-img-01.png' %}" />
+                        <div class="works-hover mt-xl-0 mt-lg-0 mt-md-0 mt-sm-5">
+                            <div class="works-hover-in">
+                                Работа №1
+                            </div>
+                        </div>
+                    </a>
+
+                    <!---- Modal Open ----->
+
+                    <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="modal-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <!--<img class="img-fluid" src="_assets/img/modal-img/1.jpg" />-->
+                                    <img class="img-fluid w-100" src="{% static 'aqua/_assets/img/work1.png' %}" />
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <img src="{% static 'aqua/_assets/img/modal-close.png' %}" />
+                                    </button>
+                                </div>
+                                <div class="modal-body float-left col-12">
+                                    <h3 class="col-12 text-center">Работа №1</h3>
+                                    <div class="modal-bottom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---- Modal Close ----->
+
+                    <div class="clearfix"></div>
+                    <a href="javascript:;" class="mt-6 float-left col-12" data-target="#modal-2" data-toggle="modal">
+                        <img class="img-fluid w-100" src="{% static 'aqua/_assets/img/work-img-04.png' %}" />
+                        <div class="works-hover mt-6">
+                            <div class="works-hover-in">
+                                Работа №4
+                            </div>
+                        </div>
+                    </a>
+
+                    <!---- Modal Open ----->
+
+                    <div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="modal-2" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <!--<img class="img-fluid" src="_assets/img/modal-img/1.jpg" />-->
+                                    <div class="vimeo">
+                                        <img class="img-fluid" src="{% static 'aqua/_assets/img/work4.png' %}" />
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <img src="{% static 'aqua/_assets/img/modal-close.png' %}" />
+                                    </button>
+                                </div>
+                                <div class="modal-body float-left col-12">
+                                    <h3 class="col-12 text-center">Работа №4</h3>
+                                    <div class="modal-bottom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---- Modal Close ----->
+                    <div class="clearfix"></div>
+                    <!---- Modal Open ----->
+
+                    <div class="modal fade" id="modal-3" tabindex="-1" role="dialog" aria-labelledby="modal-3" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="d-block w-100" src="{% static 'aqua/_assets/img/modal-img/1.jpg' %}" alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100" src="{% static 'aqua/_assets/img/modal-img/1.jpg' %}" alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100" src="{% static 'aqua/_assets/img/modal-img/1.jpg' %}" alt="Third slide">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-arrow-modal">
+                                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <img src="{% static 'aqua/_assets/img/modal-close.png' %}" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---- Modal Close ----->
+                </div>
+                <div class="col-xl-4 col-lg-12 col-md-12 col-12 float-left">
+                    <a href="javascript:;" class="mt-xl-0 mt-lg-5 mt-md-5 mt-sm-5 mt-5 float-left col-12 " data-target="#modal-4" data-toggle="modal">
+                        <img class="img-fluid w-100" src="{% static 'aqua/_assets/img/work-img-02.png' %}" />
+                        <div class="works-hover mt-xl-0 mt-lg-0 mt-md-0 mt-sm-5">
+                            <div class="works-hover-in">
+                                Работа №2
+                            </div>
+                        </div>
+                    </a>
+                    <!---- Modal Open ----->
+
+                    <div class="modal fade" id="modal-4" tabindex="-1" role="dialog" aria-labelledby="modal-4" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/work2.png' %}" />
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <img src="{% static 'aqua/_assets/img/modal-close.png' %}" />
+                                    </button>
+                                </div>
+                                <div class="modal-body float-left col-12">
+                                    <h3 class="col-12 text-center">Работа №2</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---- Modal Close ----->
+
+                    <div class="clearfix"></div>
+                    <a href="javascript:;" class="mt-6 float-left col-12" data-target="#modal-5" data-toggle="modal">
+                        <img class="img-fluid w-100" src="{% static 'aqua/_assets/img/work-img-05.png' %}" />
+                        <div class="works-hover mt-6">
+                            <div class="works-hover-in">
+                                Работа №5
+                            </div>
+                        </div>
+                    </a>
+
+                    <!---- Modal Open ----->
+
+                    <div class="modal fade" id="modal-5" tabindex="-1" role="dialog" aria-labelledby="modal-5" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/work5.png' %}" />
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <img src="{% static 'aqua/_assets/img/modal-close.png' %}" />
+                                    </button>
+                                </div>
+                                <div class="modal-body float-left col-12">
+                                    <h3 class="col-12 text-center">Работа №5</h3>
+                                    <div class="modal-bottom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---- Modal Close ----->
+
+                </div>
+                <div class="col-xl-4 col-lg-12 col-md-12 col-12 float-left">
+                    <a href="javascript:;" class="float-left  mt-xl-0 mt-lg-5 mt-md-5 mt-sm-5 mt-5 col-xl-12 col-lg-12 col-md-12 " data-target="#modal-6" data-toggle="modal">
+                        <img class="img-fluid w-100" src="{% static 'aqua/_assets/img/work-img-03.png' %}" />
+                        <div class="works-hover mt-xl-0 mt-lg-5 mt-md-5 mt-sm-5 mt-6">
+                            <div class="works-hover-in">
+                                Работа №3
+                            </div>
+                        </div>
+                    </a>
+
+                    <!---- Modal Open ----->
+
+                    <div class="modal fade" id="modal-6" tabindex="-1" role="dialog" aria-labelledby="modal-6" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/work3.png' %}" />
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <img src="{% static 'aqua/_assets/img/modal-close.png' %}" />
+                                    </button>
+                                </div>
+                                <div class="modal-body float-left col-12">
+                                    <h3 class="col-12 text-center">Работа №3</h3>
+                                    <div class="modal-bottom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---- Modal Close ----->
+
+                    <a href="javascript:;" class="mt-6 float-left col-xl-12 col-lg-12 col-md-12 " data-target="#modal-7" data-toggle="modal">
+                        <img class="img-fluid w-100" src="{% static 'aqua/_assets/img/work-img-06.png' %}" />
+                        <div class="works-hover mt-6">
+                            <div class="works-hover-in">
+                                Работа №6
+                            </div>
+                        </div>
+                    </a>
+
+                    <!---- Modal Open ----->
+
+                    <div class="modal fade" id="modal-7" tabindex="-1" role="dialog" aria-labelledby="modal-7" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/work6.png' %}" />
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <img src="{% static 'aqua/_assets/img/modal-close.png' %}" />
+                                    </button>
+                                </div>
+                                <div class="modal-body float-left col-12">
+                                    <h3 class="col-12 text-center">Работа №6</h3>
+                                    <div class="modal-bottom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---- Modal Close ----->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Works Section Container Finish -->
+    </section>
+
+    <!-- Works Section Finish -->
+
+    <div class="clearfix"></div>
+
+    <!-- References Section Start -->
+
+    <section class="references">
+        <h2 class="text-center">О нас</h2>
+
+        <!-- References Section Container Start -->
+
+        <div class="container pt-5">
+            <div class="row">
+                <div id="carouel-references" class="carousel slide col-12" data-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <!-- References Slider Start -->
+
+                        <div class="carousel-item active">
+                            <div class="col-xl-4 col-lg-12 float-left text-center">
+                                <div class="references-img">
+                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/references-img.jpg' %}" />
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-12 float-left">
+                                <h4>John Doe</h4>
+                                <p>
+                                    Чистка аквариума – популярная услуга. Поддержание чистоты в маленьком подводном царстве потребует знаний, времени и терпения, которых не хватает в современном ритме жизни. И именно в таких ситуациях на помощь придут специалисты компании AQUAservice
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- References Slider Finish -->
+                        <!-- References Slider Start -->
+
+                        <div class="carousel-item">
+                            <div class="col-xl-4 col-lg-12 float-left text-center">
+                                <div class="references-img">
+                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/references-img.jpg' %}" />
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-12 float-left">
+                                <h4>John Doe 2</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget elementum nisi. Curabitur cursus, dolor ac tempus pulvinar, risus risus elementum eros, vehicula ultricies quam arcu at augue. Donec lacinia erat nec tincidunt dignissim. Etiam egestas euismod ipsum, vitae commodo neque lacinia ac
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- References Slider Finish -->
+                        <!-- References Slider Start -->
+
+                        <div class="carousel-item">
+                            <div class="col-xl-4 col-lg-12 float-left text-center">
+                                <div class="references-img">
+                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/references-img.jpg' %}" />
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-12 float-left">
+                                <h4>John Doe 3</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget elementum nisi. Curabitur cursus, dolor ac tempus pulvinar, risus risus elementum eros, vehicula ultricies quam arcu at augue. Donec lacinia erat nec tincidunt dignissim. Etiam egestas euismod ipsum, vitae commodo neque lacinia ac
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- References Slider Finish -->
+
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouel-references" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouel-references" data-slide-to="1"></li>
+                        <li data-target="#carouel-references" data-slide-to="2"></li>
+                    </ol>
+                </div>
+                <div class="carousel-arrow">
+                    <a class="carousel-control-prev" href="#carouel-references" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouel-references" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <!-- References Section Container Finish -->
+
+    </section>
+
+    <!-- References Section Finish -->
+
+
+
+    <!-- References Logo List Start -->
+
+
+
+    <!-- References Logo List Finish -->
+
+
+
+    <!-- Contact Section Start -->
+
+    <section class="contact  mt-4 pt-5 pb-5" id="contact">
+        <h2 class="text-center">Контакты</h2>
+
+        <!-- Contact Section Container Start -->
+
+        <div class="container">
+            <div class="row">
+                <form class="col-12 form-container" method="post">
+                    {% csrf_token %}
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 float-left mt-4">
+                        {{form.subject}}
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 float-left mt-4">
+                        {{form.Email}}
+                    </div>
+                    <div class="col-12 float-left mt-4">
+                        {{form.Text}}
+                    </div>
+                    <div class="text-center">
+                        <div class="d-inline mx-auto center col-12 float-left">
+                            <button type="submit" class="btn  btn-secondary btn-block col-xl-12 col-lg-2 col-md-2 col-sm-12 col-12 mt-5">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Contact Section Container Finish -->
+
+    </section>
+
+    <!-- Contact Section Finish -->
+    <!-- Footer Start -->
+
+    <footer>
+
+        <!-- Footer Container Start -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 float-left text-center">
+                    <a href="javascript:;">
+                        <img src="{% static 'aqua/_assets/img/logo2.png' %}" width="210"/>
+                    </a>
+                </div>
+
+                <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 float-left f-text text-center">
+                    <div style="display: inline-block; text-align: left;">
+                        John Street,<br />
+                        Doe Building<br />
+                        11/8   EDIRNE/TURKEY
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 float-left f-text-three text-center">
+                    <div style="display: inline-block; text-align: left;">
+                        <div class="footer-contact">
+                            <div class="footer-contact-icon float-left">
+                                <img src="{% static 'aqua/_assets/img/footer-mail-icon.png' %}" />
+                            </div>
+                            <div class="footer-contact-text float-left mt-1"><a href="mailto:info@envato.com">info@envato.com</a></div>
+                        </div>
+                        <div class="footer-contact float-left mt-4">
+                            <div class="footer-contact-icon float-left">
+                                <img src="{% static 'aqua/_assets/img/footer-phone-icon.png' %}" />
+                            </div>
+                            <div class="footer-contact-text float-left">900 800 70 60</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 float-left text-center">
+                    <ul class="list-inline social">
+                        <li class="list-inline-item  text-center float-right">
+                            <a href="https://www.instagram.com/a_q_u_a_service/" target="_blank">
+                                <img src="{% static 'aqua/_assets/img/modal-linkedin1.png' %}" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copyright-text">All right reserved.</div>
+            </div>
+        </div>
+
+        <!-- Footer Container Finish -->
+
+    </footer>
+
+    <!-- Footer Finish -->
+
+</body>
+</html>
