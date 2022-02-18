@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>KREA - VOLIRO</title>
+    <title>Обслуживание аквариумов | AQUAservice</title>
     <link href="{% static 'aqua/_assets/css/bootstrap.min.css' %}" rel="stylesheet" />
     <link href="{% static 'aqua/_assets/css/stylesheet.css' %}" rel="stylesheet" />
     <script src="{% static 'aqua/_assets/js/jquery-3.3.1.min.js' %}"></script>
@@ -29,19 +29,6 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                {% if messages %}
-                        {% for message in messages %}
-                            {% if message.tags == 'error' %}
-                                <div class="alert alert-danger " role="alert">
-                                    {{ message }}
-                                </div>
-                            {% else %}
-                                <div class="alert alert-success" role="alert">
-                                    {{ message }}
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    {% endif %}
                 <div class="collapse navbar-collapse ml-auto" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
@@ -97,7 +84,8 @@
         </div>
         <div class="top-banner-text">
             Профессиональная чистка<br />
-            <span>и обслуживание аквариумов</span>
+            <span>и обслуживание аквариумов<br /</span>
+            <span>ГАРАНТИЯ / КАЧЕСТВО</span>
         </div>
         <div class="scroll-img">
         </div>
@@ -110,8 +98,8 @@
     <!-- Services Section Start -->
 
     <section class="services col-12">
-        <h1 class="text-center">AQUA</h1>
-        <h2 class="text-center">Service</h2>
+        <h1 class="text-center">AQUA Service</h1>
+        <h2 class="text-center">Мы предлагаем:</h2>
 
         <!-- Services Section Container Start -->
 
@@ -410,7 +398,7 @@
     <!-- References Section Start -->
 
     <section class="references">
-        <h2 class="text-center">О нас</h2>
+        <h2 class="text-center">Почему мы?</h2>
 
         <!-- References Section Container Start -->
 
@@ -418,53 +406,47 @@
             <div class="row">
                 <div id="carouel-references" class="carousel slide col-12" data-ride="carousel">
                     <div class="carousel-inner">
-
                         <!-- References Slider Start -->
-
                         <div class="carousel-item active">
                             <div class="col-xl-4 col-lg-12 float-left text-center">
                                 <div class="references-img">
-                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/references-img.jpg' %}" />
+                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/references-img1.jpg' %}" />
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-12 float-left">
-                                <h4>John Doe</h4>
+                                <h4>СОВРЕМЕННЫЕ РЕШЕНИЯ</h4>
                                 <p>
-                                    Чистка аквариума – популярная услуга. Поддержание чистоты в маленьком подводном царстве потребует знаний, времени и терпения, которых не хватает в современном ритме жизни. И именно в таких ситуациях на помощь придут специалисты компании AQUAservice
+                                    Наши решения при создании/обслуживании аквариума основываются на свежих идеях дизайна и использовании инновационного аквариумного оборудования .
                                 </p>
                             </div>
                         </div>
-
                         <!-- References Slider Finish -->
                         <!-- References Slider Start -->
-
                         <div class="carousel-item">
                             <div class="col-xl-4 col-lg-12 float-left text-center">
                                 <div class="references-img">
-                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/references-img.jpg' %}" />
+                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/references-img2.jpg' %}" />
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-12 float-left">
-                                <h4>John Doe 2</h4>
+                                <h4>ОПЫТНАЯ КОМАНДА</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget elementum nisi. Curabitur cursus, dolor ac tempus pulvinar, risus risus elementum eros, vehicula ultricies quam arcu at augue. Donec lacinia erat nec tincidunt dignissim. Etiam egestas euismod ipsum, vitae commodo neque lacinia ac
+                                    У нас работают специалисты-консультанты с опытом работы в аквариумистике более 15 лет.
                                 </p>
                             </div>
                         </div>
-
                         <!-- References Slider Finish -->
                         <!-- References Slider Start -->
-
                         <div class="carousel-item">
                             <div class="col-xl-4 col-lg-12 float-left text-center">
                                 <div class="references-img">
-                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/references-img.jpg' %}" />
+                                    <img class="img-fluid" src="{% static 'aqua/_assets/img/references-img3.jpg' %}" />
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-12 float-left">
-                                <h4>John Doe 3</h4>
+                                <h4>КРЕАТИВНЫЙ ПОДХОД</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget elementum nisi. Curabitur cursus, dolor ac tempus pulvinar, risus risus elementum eros, vehicula ultricies quam arcu at augue. Donec lacinia erat nec tincidunt dignissim. Etiam egestas euismod ipsum, vitae commodo neque lacinia ac
+                                    Каждый проект, над которым мы работаем, основан на творческом решении любых вопросов.
                                 </p>
                             </div>
                         </div>
@@ -526,9 +508,8 @@
                 </div>
                 <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 float-left f-text text-center">
                     <div style="display: inline-block; text-align: left;">
-                        John Street,<br />
-                        Doe Building<br />
-                        11/8   EDIRNE/TURKEY
+                        Самара<br /><br />
+                        Бузулук<br />
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 float-left f-text-three text-center">
@@ -547,16 +528,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 float-left text-center">
-                    <ul class="list-inline social">
-                        <li class="list-inline-item  text-center float-right">
+                <div class="col-xl-2 col-lg-12 col-md-12 col-sm-12 col-12 float-left text-center">
                             <a href="https://www.instagram.com/a_q_u_a_service/" target="_blank">
                                 <img src="{% static 'aqua/_assets/img/modal-linkedin1.png' %}" />
                             </a>
-                        </li>
-                    </ul>
                 </div>
-                <div class="copyright-text">All right reserved.</div>
+                <div class="copyright-text col-xl-3"><br /><br />© 2022. Все права защищены AQUAservice</div>
             </div>
         </div>
         <!-- Footer Container Finish -->
